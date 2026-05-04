@@ -1,17 +1,13 @@
 <template>
-    <div :id="id" class="container mt-3">
-        <div class="card">
-            <div class="card-header">
-                <h1>Contact</h1>
-            </div>
-            <div class="card-body">
-                this is the body part
-            </div>
-        </div>
-    </div>
+    <section id="contact">
+      <HeaderComponent :label="`Contact`"/>
+      <div :id="id" class="container">
+         
+      </div>
+    </section>
 </template>
 <script setup>
-import { defineProps } from 'vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 defineProps({
   id: { type: String, required: false }
 })

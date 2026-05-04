@@ -1,8 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import HeaderComponent from "@/components/HeaderComponent.vue";
-// import AboutView from '../views/AboutView.vue';
-// import ContactView from '@/views/ContactView.vue';
-// import MyWorkView from '@/views/MyWorkView.vue';
 import HomeView from '@/views/HomeView.vue';
 const routes = [
   {
