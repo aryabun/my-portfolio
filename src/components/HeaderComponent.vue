@@ -1,13 +1,8 @@
 <template>
-    <div class="col-12 custom-header">
-        <div class="container">
-            <div class="d-flex flex-row sticky-header">
-                <h1 class="element title-md uppercase me-3"><span>
-                        {{ props.label }}
-                    </span></h1>
-            </div>
-            <slot></slot>
-        </div>
+    <div class="d-flex flex-row" style="min-width: 40%;">
+        <h1 class="element title-md"><span>
+                {{ props.label }}
+            </span></h1>
     </div>
 </template>
 <script setup>
@@ -30,11 +25,11 @@ onMounted(() => {
             let SplitClient = new SplitText(target, { type: "words,chars" });
             let chars = SplitClient.chars; //an array of all the divs that wrap each character
             gsap.from(chars, {
-                duration: 0.5,
+                duration: 0.3,
                 opacity: 0,
-                y: 10,
+                y: 5,
                 ease: "none",
-                stagger: 0.2,
+                stagger: 0.08,
                 scrollTrigger: {
                     trigger: target,
                     start: "top 80%", // Starts when element is near bottom of viewport

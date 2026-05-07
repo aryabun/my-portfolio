@@ -1,13 +1,13 @@
 <template>
   <section id="home">
      <!-- class="home-bg" -->
-    <div :id="id" class="container home">
+    <main :id="id" class="container home">
       <div class="d-flex flex-column img-frame">
         <img src="@/assets/img/sunset.png" alt="">
       </div>
       <div class="d-flex flex-column">
         <div class="d-flex flex-row">
-          <h1 class="name title-lg uppercase ms-0">Bun Arya
+          <h1 class="name title-lg ms-0">Bun Arya
           </h1>
         </div>
         <div class="d-flex flex-column align-items-md-end align-items-justify animate-des">
@@ -16,7 +16,7 @@
             design solutions.</p>
         </div>
       </div>
-    </div>
+    </main>
   </section>
 </template>
 <script setup>
@@ -49,8 +49,6 @@ onMounted(() => {
         y: (i) => i * 100 - 50,
         ease: "expo"
       }, 0);
-
-    gsap.set('.role-des', { opacity: 1 })
     gsap.from(desc.words, {
       opacity: 0,
       duration: 2,
@@ -59,15 +57,16 @@ onMounted(() => {
     });
 
     // ScrollTrigger for container
-    ScrollTrigger.create({
-      trigger: '.home',
-      start: "top 17%",
-      pin: true,
-      pinSpacing: false
-    });
+    // s
   });
 });
 onUnmounted(() => {
   ctx.revert(); // This kills ALL ScrollTriggers and resets ALL inline styles
 });
 </script>
+<style scoped>
+main{
+  position: relative;
+  top: 1.5rem;
+}
+</style>
