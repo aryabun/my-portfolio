@@ -20,7 +20,7 @@
             </div>
             <div class="d-flex flex-column justify-content-end">
               <div class="d-flex flex-row flex-shrink-0">
-                <h1 class="title-lg m-0 icon"><i class='bx bx-arrow-back arrow-icon'></i>
+                <h1 class="title-lg m-0 contact-icon"><i class='bx bx-arrow-back arrow-icon'></i>
                 </h1>
               </div>
             </div>
@@ -94,12 +94,12 @@ onMounted(() => {
     // For Arrow Icon
     const tl = gsap.timeline({ repeat: -1 }); // -1 means infinite repeat
 
-    tl.to([".icon", '.download'], {
+    tl.to([".contact-icon", '.download'], {
       scale: 1.1,
       duration: 0.5,
       ease: "power2.out"
     })
-      .to([".icon", '.download'], {
+      .to([".contact-icon", '.download'], {
         scale: 1,
         duration: 0.8,
         ease: "power2.in"
