@@ -7,6 +7,12 @@ import SkillComponent from './components/sections/SkillComponent.vue';
 import ProfileComponent from './components/sections/ProfileComponent.vue';
 import EducationComponent from './components/sections/EducationComponent.vue';
 import ExperienceComponent from './components/sections/ExperienceComponent.vue';
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = "BUN Arya Portfolio"
+});
+
 </script>
 
 <template>
