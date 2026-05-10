@@ -27,9 +27,8 @@
           </div>
           <div class="d-flex flex-column justify-content-center mx-4 mt-4">
             <div class="d-flex flex-column m-4">
-              <a class="download btn btn-light btn-outline-dark" href="">
-                Download CV
-              </a>
+              <a href="/bunarya_2026.pdf" download="Bun_Arya_Resume.pdf" class="download btn btn-light btn-outline-dark">
+                Download CV </a>
             </div>
             <p class="text-center"></p>
             <div class="d-flex flex-column gap-2">
@@ -42,13 +41,13 @@
               <p class="text-center">Or Find me on other platform</p>
             </div>
             <div class="d-flex flex-lg-row gap-2">
-              <a class="btn btn-dark rounded-pill d-flex align-items-center flex-fill justify-content-center" href=""
+              <a class="btn btn-dark rounded-pill d-flex align-items-center flex-fill justify-content-center" href="https://github.com/aryabun"
                 target="_blank">
                 <i class='bx bxl-github pe-2' style="font-size: 25px;"></i>
                 GitHub
               </a>
               <a class="btn btn-sm-dark btn-dark rounded-pill d-flex align-items-center flex-fill justify-content-center"
-                href="" target="_blank">
+                href="https://www.linkedin.com/in/arya-bun-9464a31a4/" target="_blank">
                 <i class='bx bxl-linkedin-square pe-2' style="font-size: 25px;"></i>
                 LinkedIn
               </a>
@@ -71,10 +70,9 @@
       </div>
     </div>
   </section>
-  <FooterComponent/>
+  <FooterComponent />
 </template>
 <script setup>
-// import HeaderComponent from '@/components/HeaderComponent.vue';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted, onUnmounted } from 'vue';

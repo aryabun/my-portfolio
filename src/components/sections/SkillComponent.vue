@@ -86,7 +86,7 @@
                             </div>
                             <div class="inline-flex px-3 py-2 badge border border-danger text-danger rounded-pill">
                                 <div class="d-flex flex-row align-items-center">
-                                    <img src="https://www.svgrepo.com/show/306319/laravel.svg" alt=""
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/3840px-Laravel.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt=""
                                         style="height: 25px;">
                                     <span class="mx-2">Laravel</span>
                                 </div>
@@ -125,9 +125,9 @@
                             <div class="bg-gradient-aurora divider rounded"></div>
                         </div>
                         <div class="d-flex flex-wrap gap-3 my-2">
-                            <div class="inline-flex px-3 py-2 badge border border-dark text-dark rounded-pill">
+                            <div class="inline-flex px-3 py-2 badge border border-warning text-warning rounded-pill">
                                 <div class="d-flex flex-row align-items-center">
-                                    <img src="https://www.svgrepo.com/show/306590/postman.svg" alt=""
+                                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/postman-icon.png" alt=""
                                         style="height: 25px;">
                                     <span class="mx-2">Postman</span>
                                 </div>
