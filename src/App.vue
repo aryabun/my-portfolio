@@ -1,25 +1,23 @@
 <script setup>
-import HeaderComponent from './components/HeaderComponent.vue';
-import AboutView from './views/AboutView.vue';
-import ContactView from './views/ContactView.vue';
-import HomeView from './views/HomeView.vue';
-import MyWorkView from './views/MyWorkView.vue';
-
+import NavBar from './components/layouts/NavBar.vue';
+import FooterComponent from './components/layouts/FooterComponent.vue';
+import ContactComponent from './components/sections/ContactComponent.vue';
+import HeroComponent from './components/sections/HeroComponent.vue'
+import SkillComponent from './components/sections/SkillComponent.vue';
+import ProfileComponent from './components/sections/ProfileComponent.vue';
+import EducationComponent from './components/sections/EducationComponent.vue';
+import ExperienceComponent from './components/sections/ExperienceComponent.vue';
 </script>
 
 <template>
-  <HeaderComponent />
-  <section id="home" class="home-background">
-    <HomeView id="home" />
-  </section>
-  <section id="about">
-    <AboutView id="about" />
-  </section>
-  <section id="myWork">
-    <MyWorkView id="myWork" />
-  </section>
-  <section id="contact">
-    <ContactView id="contact" />
-  </section>
+  <!-- <NavBar /> -->
+   <NavBar/>
+  <HeroComponent />
+  <ProfileComponent />
+  <EducationComponent />
+  <ExperienceComponent />
+  <SkillComponent />
+  <ContactComponent />
+  <FooterComponent />
 </template>
 <style></style>

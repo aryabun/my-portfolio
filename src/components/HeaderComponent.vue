@@ -1,37 +1,45 @@
 <template>
-    <div class="bg-transparent">
-        <div class="nav">
-            <div class="container">
-                <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                    <div class="d-flex flex-row justify-content-between align-items-stretch w-100">
-                        <div class="d-flex flex-row">
-                            <router-link :to="{ path: '/', hash: '#home' }">
-                                <img src="@/assets/img/apsararya_flower.png" class="logo" alt="logo">
-                            </router-link>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <router-link class="nav-items" :to="{ path: '/', hash: '#home' }">Home</router-link>
-                            <router-link class="nav-items" :to="{ path: '/', hash: '#about' }">About</router-link>
-                            <router-link class="nav-items" :to="{ path: '/', hash: '#myWork' }">My Works</router-link>
-                            <router-link class="nav-items" :to="{ path: '/', hash: '#contact' }">Contact</router-link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="sidenav">
-            <router-link id="fv-dots" :to="{ path: '/', hash: '#home' }"></router-link>
-            <router-link id="fv-dots" :to="{ path: '/', hash: '#about' }"></router-link>
-            <router-link id="fv-dots" :to="{ path: '/', hash: '#myWork' }"></router-link>
-            <router-link id="fv-dots" :to="{ path: '/', hash: '#contact' }"></router-link>
-        </div>
+    <div class="d-flex flex-row" style="min-width: 40%;">
+        <h1 class="element title-md"><span>
+                {{ props.label }}
+            </span></h1>
     </div>
 </template>
 <script setup>
+import gsap from 'gsap';
+import { SplitText } from "gsap/SplitText";
+import { onMounted, onUnmounted } from 'vue';
+gsap.registerPlugin(SplitText)
+const props = defineProps({
+    label: {
+        type: String,
+        required: true
+    }
+});
+let ctx;
+onMounted(() => {
+    // Use gsap.context to wrap all animations
+    ctx = gsap.context(() => {
+        const targets = gsap.utils.toArray(".element");
+        targets.forEach((target) => {
+            let SplitClient = new SplitText(target, { type: "words,chars" });
+            let chars = SplitClient.chars; //an array of all the divs that wrap each character
+            gsap.from(chars, {
+                duration: 0.3,
+                opacity: 0,
+                y: 5,
+                ease: "none",
+                stagger: 0.08,
+                scrollTrigger: {
+                    trigger: target,
+                    start: "top 80%", // Starts when element is near bottom of viewport
+                    once: true        // kills the trigger after it plays once
+                }
+            });
+        });
+    });
+});
+onUnmounted(() => {
+    ctx.revert(); // This kills ALL ScrollTriggers and resets ALL inline styles
+});
 </script>
-<style lang="css" scoped>
-.logo {
-    height: 1.8rem;
-    margin: 10px 0;
-}
-</style>
