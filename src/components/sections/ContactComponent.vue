@@ -11,9 +11,9 @@
             </h2>
           </div>
         </div>
-        <div class="d-flex flex-md-row flex-column pt-4 pb-2" style="height: 30rem;">
+        <div class="d-flex flex-lg-row flex-column pt-4 pb-2" style="height: 30rem;">
           <!-- Your specific content goes here -->
-          <div class="d-flex flex-md-row flex-column flex-md-fill align-items-md-end align-items-center">
+          <div class="d-flex flex-lg-row flex-column flex-lg-fill align-items-lg-end align-items-center">
             <div class="d-flex flex-column justify-content-end">
               <h1 class="title-lg m-0">Let's talk
               </h1>
@@ -41,7 +41,7 @@
               </a>
               <p class="text-center">Or Find me on other platform</p>
             </div>
-            <div class="d-flex flex-md-row gap-2">
+            <div class="d-flex flex-lg-row gap-2">
               <a class="btn btn-dark rounded-pill d-flex align-items-center flex-fill justify-content-center" href=""
                 target="_blank">
                 <i class='bx bxl-github pe-2' style="font-size: 25px;"></i>
@@ -53,7 +53,7 @@
                 LinkedIn
               </a>
             </div>
-            <div class="d-flex flex-md-row flex-column gap-2 mt-2">
+            <div class="d-flex flex-lg-row flex-column gap-2 mt-2">
               <div class="d-flex flex-column flex-fill">
                 <span class="fw-bold badge border border-success text-success rounded-pill">
                   <i class='p-1 bx bxs-circle text-success' style="font-size: 10px;"></i>
@@ -71,6 +71,7 @@
       </div>
     </div>
   </section>
+  <FooterComponent/>
 </template>
 <script setup>
 // import HeaderComponent from '@/components/HeaderComponent.vue';
@@ -78,6 +79,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { onMounted, onUnmounted } from 'vue';
 import { horizontalLoop } from '@/helpers/gsap-helpers';
+import FooterComponent from '../layouts/FooterComponent.vue';
 
 defineProps({
   id: { type: String, required: false }

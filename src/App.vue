@@ -1,6 +1,5 @@
 <script setup>
 import NavBar from './components/layouts/NavBar.vue';
-import FooterComponent from './components/layouts/FooterComponent.vue';
 import ContactComponent from './components/sections/ContactComponent.vue';
 import HeroComponent from './components/sections/HeroComponent.vue'
 import SkillComponent from './components/sections/SkillComponent.vue';
@@ -24,6 +23,5 @@ onMounted(() => {
   <ExperienceComponent />
   <SkillComponent />
   <ContactComponent />
-  <FooterComponent />
 </template>
 <style></style>
