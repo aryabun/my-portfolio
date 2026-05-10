@@ -12,7 +12,7 @@
                         </div>
                         <div class="mx-2 p-4">
                             <div class="mb-4" style="text-align: justify;">
-                                <p class="my-2">I am a <span class="fw-bold">frontend-focused</span> developer with a
+                                <p class="my-2">I am a <span class="fw-bold">Web Developer</span> with a
                                     Bachelor degree
                                     from
                                     <a href="https://itc.edu.kh/" target="_blank">Institute of Technology of
@@ -55,7 +55,7 @@
                                     <span class="fw-bold uppercase">Hobbies:</span>
                                 </div>
                                 <div class="col">
-                                    <span>Read, Anime, Fitness(gym, running)</span>
+                                    <span>Read, Movie, Fitness(gym, running), Music, Travel</span>
                                 </div>
                             </div>
                         </div>

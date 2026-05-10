@@ -91,6 +91,7 @@ let ctx;
 onMounted(() => {
   // Use gsap.context to wrap all animations
   ctx = gsap.context(() => {
+    const marqueeItems = document.querySelectorAll(".js-item");
     // For Arrow Icon
     const tl = gsap.timeline({ repeat: -1 }); // -1 means infinite repeat
 
@@ -104,44 +105,39 @@ onMounted(() => {
         duration: 0.8,
         ease: "power2.in"
       });
-    // Select items for both rows
-    const rowItem = gsap.utils.toArray(".js-container .js-item");
-
-    // Create Loop 2 (Moves Left to Right)
-    const loop = horizontalLoop(rowItem, {
+    const loop = horizontalLoop(marqueeItems, {
       repeat: -1,
-      speed: 0.5,
       paddingRight: 30,
+      speed: 0.5,
+      draggable: true
     });
-
-    // Flip the direction of the second loop immediately
-    gsap.set(loop, { timeScale: -1 });
+    let currentDirection = 1;
 
     let speedTween;
+    const scrollingContainer = document.querySelector(".js-container");
 
     ScrollTrigger.create({
-      trigger: ".js-main-wrapper", // A wrapper containing both rows
+      trigger: scrollingContainer,
       start: "top bottom",
       end: "bottom top",
       onUpdate: (self) => {
-        const scrollDir = self.direction; // 1 (down) or -1 (up)
-
-        if (speedTween) speedTween.kill();
-
-        // We animate both loops. 
-        // Row 1 follows scrollDir, Row 2 stays inverted to scrollDir.
-        speedTween = gsap.to(loop, {
-          timeScale: () => {
-            return scrollDir * -2;
-          },
-          duration: 0.3,
-          ease: "power1.out",
-          onComplete: () => {
-            // Return to base speeds (1 and -1)
-            gsap.to(loop, { timeScale: scrollDir * -1, duration: 1 });
-          }
-        });
-      }
+        currentDirection = self.direction;
+        speedTween && speedTween.kill();
+        speedTween = gsap
+          .timeline()
+          .to(loop, {
+            timeScale: 2 * currentDirection,
+            duration: 0.25
+          })
+          .to(
+            loop,
+            {
+              timeScale: 2 * currentDirection,
+              duration: 0.25
+            },
+            "+=0.5"
+          );
+      },
     });
   });
 });

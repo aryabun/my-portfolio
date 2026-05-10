@@ -33,7 +33,7 @@ onMounted(() => {
                 scrollTrigger: {
                     trigger: target,
                     start: "top 80%", // Starts when element is near bottom of viewport
-                    once: true        // This is the magic key: it kills the trigger after it plays once
+                    once: true        // kills the trigger after it plays once
                 }
             });
         });

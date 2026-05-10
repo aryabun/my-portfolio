@@ -62,36 +62,26 @@ let ctx;
 onMounted(() => {
     // Use gsap.context to wrap all animations
     ctx = gsap.context(() => {
-        gsap.set('.education-timeline', {
-            opacity: 0,
-            xPercent: 2
-        });
-
-        const tl = gsap.timeline({
+        gsap.timeline({
             scrollTrigger: {
-                trigger: '.animate-row',
-                start: "top top",
+                trigger: '#education-header',
+                start: "top 80%",
                 toggleActions: 'play none none none',
                 once: true
             }
-        });
-
-        // Header animation
-        tl.from('#education-header', {
-            y: 0,
-            opacity: 0,
-            duration: 0.8,
-            ease: "power3.out"
-        });
-
-        // Timeline animation AFTER header finishes
-        tl.to('.education-timeline', {
-            xPercent: 2,
-            opacity: 1,
-            duration: 0.8,
-            ease: "power2.out"
-        });
-
+        })
+            .from('#education-header', {
+                duration: 0.6,
+                opacity: 0,
+                y: 30,
+                ease: "power3.out"
+            })
+            .from('.education-timeline', {
+                duration: 0.4,
+                opacity: 0,
+                x: 20,
+                ease: "power3.out"
+            }, "+=0.1");
         const blocks = document.querySelectorAll('.content');
         blocks.forEach((block) => {
             ScrollTrigger.create({
