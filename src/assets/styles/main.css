@@ -34,10 +34,9 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: var(--dark);
 }
-
-section {
-    position: relative;
-    min-height: 100vh;
+section#home, section#contact {
+    /* position: relative; */
+    /* min-height: 100vh; */
     /* giving nice seperation gap */
     padding: 70px 0;
 }
@@ -240,7 +239,7 @@ nav a.active {
         linear-gradient(#fafaff 0 0) padding-box,
         /*this is your grey background*/
         var(--gradient-aurora) border-box;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
     border-radius: 50px;
 }
 
@@ -287,16 +286,12 @@ nav a.active {
     background-image: var(--gradient-aurora);
 }
 
-@media (max-width: 426px) {
-    section {
-        position: relative;
-        min-height: 100vh;
-        /* giving nice seperation gap */
-        padding: 10px 0;
-    }
-
+@media (max-width: 768px) {
     section#home {
-        top: 3.4rem;
+        position: relative;
+        /* min-height: auto; */
+        /* top: 3.5rem; */
+        padding: 70px 0;
     }
 
     section#contact {

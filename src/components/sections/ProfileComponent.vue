@@ -87,7 +87,7 @@ onMounted(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: row,           // Trigger is the specific row
-                start: "top 80%",       // Starts when the row is 0% down the screen
+                start: "top 70%",       // Starts when the row is 0% down the screen
                 toggleActions: 'play none none none',
                 once: true
             }
