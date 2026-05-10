@@ -1,31 +1,20 @@
 <template>
     <div class="container">
-        <footer class="d-flex flex-column justify-content-center position-relative" style="z-index: 3;">
+        <footer class="d-flex flex-column justify-content-center position-relative my-2" style="z-index: 3;">
             <!-- main column has 2 elements -->
-            <div class="d-flex flex-column flex-md-row  align-items-between justify-content-between">
+            <div class="d-flex flex-column flex-lg-row  align-items-between justify-content-between">
                 <!-- first element for Year -->
                 <div class="d-flex flex-column justify-content-center">
-                    <i>@2026 All Rights Reserved</i>
+                    <i><i class='bx bx-copyright'></i>2026 Arya Bun. All Rights Reserved</i>
                 </div>
                 <!-- second element for Social Media -->
                 <div class="d-flex flex-column my-2">
-                    <!-- <div class="d-flex flex-row align-items-start">
-                        <a class="btn btn-outline-light rounded-pill d-flex align-items-center text-dark" href="" target="_blank">
-                            <i class='bx bxl-github pe-2' style="font-size: 25px;"></i>
-                            GitHub
-                        </a>
-                        <a class="btn btn-outline-light rounded-pill d-flex align-items-center text-primary" href="" target="_blank">
-                            <i class='bx bxl-linkedin-square pe-2' style="font-size: 25px;"></i>
-                            LinkedIn
-                        </a>
-                        <a class="btn btn-outline-light rounded-pill d-flex align-items-center text-dark" href="" target="_blank">
-                            <i class='bx bxl-linkedin-square pe-2' style="font-size: 25px;"></i>
-                            Instagram
-                        </a>
-                    </div> -->
+                    <a class="btn btn-light rounded-pill d-flex align-items-center flex-fill justify-content-center"
+                        href="https://github.com/aryabun" target="_blank">
+                        <i class='bx bxl-github pe-2' style="font-size: 25px;"></i>
+                        Source
+                    </a>
                 </div>
-                <!-- <div class="d-flex flex-row">
-                </div> -->
             </div>
         </footer>
     </div>

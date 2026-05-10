@@ -33,26 +33,36 @@
                                     challenges and
                                     opportunities to enhance my skills.</p>
                             </div>
-                            <div class="row my-4">
+                            <div class="row my-4 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span class="fw-bold uppercase">Core Tech Stack:</span>
+                                    <span
+                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                        <span class="me-2" style="font-size: 25px;"><i
+                                                class='bx bx-terminal'></i></span>
+                                        Core Tech Stack :</span>
                                 </div>
                                 <div class="col">
-                                    <span class="fw-bold">JavaScript, TypeScript, VueJs, NuxtJs, Bootstrap, TailwindCss,
+                                    <span class="fw-bold">JavaScript, TypeScript, VueJs, NuxtJs, Bootstrap, TailwindCSS,
                                         Laravel</span>
                                 </div>
                             </div>
-                            <div class="row my-3">
+                            <div class="row my-3 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span class="fw-bold uppercase">Location:</span>
+                                    <span
+                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                        <span class="me-2" style="font-size: 25px;"><i
+                                                class='bx bxs-map'></i></span>Location :</span>
                                 </div>
                                 <div class="col">
                                     <span>Phnom Penh, Cambodia</span>
                                 </div>
                             </div>
-                            <div class="row my-3">
+                            <div class="row my-3 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span class="fw-bold uppercase">Hobbies:</span>
+                                    <span
+                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                        <span class="me-2" style="font-size: 25px;"><i
+                                                class='bx bx-palette'></i></span>Hobbies :</span>
                                 </div>
                                 <div class="col">
                                     <span>Read, Movie, Fitness(gym, running), Music, Travel</span>
