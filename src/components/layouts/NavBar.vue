@@ -6,7 +6,8 @@
                     <div class="d-flex flex-row justify-content-md-start align-items-end w-100 justify-content-center">
                         <img src="@/assets/img/A-drawn.png" class="logo" alt="logo">
                     </div>
-                    <div class="nav-element  d-none d-lg-flex d-flex flex-row align-items-center w-100 gap-4 justify-content-md-end">
+                    <div
+                        class="nav-element  d-none d-lg-flex d-flex flex-row align-items-center w-100 gap-4 justify-content-md-end">
                         <div><a href="#home">Home</a></div>
                         <div><a href="#profile">Profile</a></div>
                         <div><a href="#education">Education</a></div>
@@ -16,12 +17,6 @@
                     </div>
                     <div class="plus-element d-flex flex-row d-lg-none justify-content-center align-items-center ">
                         <i class='bx bx-plus' style="font-size: 40px;"></i>
-                        <!-- <div><a href="#home">Home</a></div>
-                        <div><a href="#profile">Profile</a></div>
-                        <div><a href="#education">Education</a></div>
-                        <div><a href="#experiences">Experiences</a></div>
-                        <div><a href="#skill">Skills</a></div>
-                        <div><a href="#contact">Contact</a></div> -->
                     </div>
                 </div>
             </div>
@@ -60,6 +55,13 @@ onMounted(() => {
             onUpdate: (self) => {
                 self.direction === -1 ? showAnim.play() : showAnim.reverse();
             }
+        });
+        // Add this
+        ScrollTrigger.create({
+            start: "700px top",
+            end: 99999,
+            onEnter: () => document.querySelector(".nav").classList.add("scrolled"),
+            onLeaveBack: () => document.querySelector(".nav").classList.remove("scrolled"),
         });
         let links = gsap.utils.toArray("nav a");
 

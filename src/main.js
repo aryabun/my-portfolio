@@ -6,6 +6,7 @@ import store from './store'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 // main css stylesheet
 import './assets/styles/main.css'
+import './assets/styles/responsive.css'
 import 'boxicons'
 import 'boxicons/css/boxicons.min.css';
 

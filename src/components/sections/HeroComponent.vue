@@ -1,21 +1,18 @@
 <template>
   <section id="home">
-     <!-- class="home-bg" -->
-    <main :id="id" class="container home">
-      <div class="d-flex flex-column img-frame">
-        <img src="@/assets/img/sunset.png" alt="">
-      </div>
-      <div class="d-flex flex-column">
-        <div class="d-flex flex-row">
-          <h1 class="name title-lg ms-0">Bun Arya
-          </h1>
-        </div>
-        <div class="d-flex flex-column align-items-md-end align-items-justify animate-des">
-          <h1>Web Developer</h1>
-          <p class="w-lg-25">Creating beautiful, responsive, and user-friendly web experiences with modern technologies and creative
+    <!-- class="home-bg" -->
+    <main :id="id" class="home">
+      <div class="container min-vh-100 content-overlay d-flex flex-column justify-content-end justify-content-xxl-center pb-4">
+        <h1 class=" fw-bold name title-lg ms-0">Bun Arya</h1>
+        <div class="d-flex flex-column align-items-justify animate-des">
+          <span class="fs-3 d-block my-3 text-secondary">Web Developer</span>
+          <p class="col-md-6">Creating beautiful, responsive, and user-friendly web experiences with modern
+            technologies
+            and creative
             design solutions.</p>
         </div>
       </div>
+
     </main>
   </section>
 </template>
@@ -65,8 +62,11 @@ onUnmounted(() => {
 });
 </script>
 <style scoped>
-main{
-  position: relative;
-  top: 1.5rem;
+.pfp-container img {
+  object-position: 100% 60%;
+}
+
+nav a {
+  color: white !important;
 }
 </style>

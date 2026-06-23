@@ -1,10 +1,10 @@
 <template>
     <section id="profile">
         <main :id="id" class="container">
-            <div class="animate-row d-flex flex-column my-4">
+            <div class="animate-row d-flex flex-xl-row flex-column my-4">
                 <HeaderComponent id="profile-header" label="Profile" />
                 <div class="glass-card pfp-card">
-                    <div class="d-flex flex-column flex-lg-row my-4">
+                    <div class="d-flex flex-column my-4">
                         <div class="d-flex flex-sm-column mx-auto">
                             <div class="d-flex flex-sm-row pfp-container my-2">
                                 <img src="@/assets/img/IMG2797.png" alt="profile_pic">
@@ -12,20 +12,15 @@
                         </div>
                         <div class="mx-2 p-4">
                             <div class="mb-4" style="text-align: justify;">
-                                <p class="my-2">I am a <span class="fw-bold">Web Developer</span> with a
-                                    Bachelor degree
-                                    from
-                                    <a href="https://itc.edu.kh/" target="_blank">Institute of Technology of
-                                        Cambodia <i class='bx bx-link'></i></a>.
-                                    My previous experience in a startup environment has enabled me to explore and expand
-                                    my skills
-                                    beyond
-                                    frontend development. In addition to my frontend skills, I have a working background
-                                    in <span class="fw-bold">backend
-                                        development with Laravel (PHP)</span> and
-                                    have also contributed to the development of <span class="fw-bold">mobile
-                                        applications with
-                                        Flutter.</span>
+                                <p class="my-2">I am a <span class="fw-bold">web developer</span> with a Bachelor's
+                                    degree from
+                                    <a href="https://itc.edu.kh/" target="_blank">Institute of Technology of Cambodia <i
+                                            class='bx bx-link'></i></a>.
+                                    I have a solid background in <span class="fw-bold">frontend development using
+                                        VueJs/NuxtJs</span>.
+                                    Additionally, my previous experience in a startup environment allowed me to expand my skills into
+                                    <span class="fw-bold">backend development with Laravel (PHP)</span> and
+                                    <span class="fw-bold">assisting with mobile development team using Flutter.</span>
                                 </p>
                                 <p class="my-2">This cross-platform experience allows me to collaborate effectively. I'm
                                     currently
@@ -35,8 +30,7 @@
                             </div>
                             <div class="row my-4 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span
-                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                    <span class="fw-bold uppercase d-flex flex-row align-items-center">
                                         <span class="me-2" style="font-size: 25px;"><i
                                                 class='bx bx-terminal'></i></span>
                                         Core Tech Stack :</span>
@@ -48,8 +42,7 @@
                             </div>
                             <div class="row my-3 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span
-                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                    <span class="fw-bold uppercase d-flex flex-row align-items-center">
                                         <span class="me-2" style="font-size: 25px;"><i
                                                 class='bx bxs-map'></i></span>Location :</span>
                                 </div>
@@ -59,8 +52,7 @@
                             </div>
                             <div class="row my-3 d-flex align-items-center justify-content-center">
                                 <div class="col-12 col-lg-5 col-md-4 col-xl-3">
-                                    <span
-                                        class="fw-bold uppercase d-flex flex-row align-items-center">
+                                    <span class="fw-bold uppercase d-flex flex-row align-items-center">
                                         <span class="me-2" style="font-size: 25px;"><i
                                                 class='bx bx-palette'></i></span>Hobbies :</span>
                                 </div>
@@ -107,7 +99,8 @@ onMounted(() => {
             yPercent: 0,
             opacity: 0,
             duration: 0.8,
-            ease: "power2.out"
+            ease: "power2.out",
+            clearProps: "all"
         });
 
         // Then profile card

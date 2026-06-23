@@ -1,7 +1,7 @@
 <template>
     <section id="experiences">
         <main :id="id" class="container">
-            <div class="exp-row d-flex flex-lg-row flex-column my-4">
+            <div class="exp-row d-flex flex-xl-row flex-column my-4">
                 <HeaderComponent id="exp-header" label="Experiences" />
                 <div class="exp-timeline timeline">
                     <div class="content-block" v-for="(exp, i) in experiences" :key="i">
@@ -19,23 +19,22 @@
                                 </span>
                                 <span class="badge rounded-pill" :class="exp.type.style">{{ exp.type.name }}</span>
                             </p>
-                            <div class=" d-flex flex-column flex-md-row flex-sm-column my-4">
-                                <h2 class="me-2">{{ exp.title }},</h2>
+                            <div class=" d-flex flex-wrap uppercase my-4">
+                                <h2 class="fw-bold me-2">{{ exp.title }},</h2>
                                 <span>
-                                    <a :href="exp.org.link" target="_blank">{{ exp.org.name }}<i
+                                    <a class="text-muted" :href="exp.org.link" target="_blank">{{ exp.org.name }}<i
                                             class='bx bx-link'></i></a>
                                 </span>
-                            </div>
-                            <div class="d-flex flex-wrap flex-md-row flex-lg-row flex-sm-column py-2 gap-2">
-                                <p>Tech Stack:
-                                </p>
-                                <span v-for="(stack, j) in exp.tech" :key="j" class="badge border rounded-pill"
-                                    :class="stack.style">{{
-                                        stack.name }}</span>
                             </div>
                             <ul v-for="(des, k) in exp.description" :key="k" class="gap-0">
                                 <li>{{ des.name }}</li>
                             </ul>
+                            <!-- <div class="card-footer-socials w-100  border-top">
+                                <div class="d-flex gap-2 pt-3"></div>
+                                 <span v-for="(stack, j) in exp.tech" :key="j" class="badge border rounded-pill"
+                                    :class="stack.style">{{
+                                        stack.name }}</span>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -135,7 +134,7 @@ let ctx;
 onMounted(() => {
     // Use gsap.context to wrap all animations
     ctx = gsap.context(() => {
-       gsap.timeline({
+        gsap.timeline({
             scrollTrigger: {
                 trigger: '#exp-header',
                 start: "top 80%",
