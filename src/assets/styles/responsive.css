@@ -103,12 +103,10 @@
         height: 100%;
         /* match parent height, not just viewport */
         background: url("@/assets/img/IMG4278.png");
-        background-size: contain;
-        /* background-position:40% -8rem; */
-        /* background-position: center -8rem; */
-        z-index: 0;
-        /* background-position: center bottom; */
-        /* background-attachment: fixed; */
+        background-size: 120%;
+        background-position: 40% -9rem;
+        background-attachment: scroll;
+        /* ✅ remove fixed on mobile */
         background-repeat: no-repeat;
     }
 
@@ -142,7 +140,7 @@
 }
 
 
-@media (max-width: 1366px) and (min-aspect-ratio: 9/16){
+@media (max-width: 1366px) and (min-aspect-ratio: 9/16) {
     section {
         overflow-x: hidden;
     }
