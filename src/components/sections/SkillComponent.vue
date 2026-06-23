@@ -279,3 +279,9 @@ onUnmounted(() => {
     ctx.revert(); // This kills ALL ScrollTriggers and resets ALL inline styles
 });
 </script>
+<style scoped>
+
+.header {
+    position: static;
+}
+</style>

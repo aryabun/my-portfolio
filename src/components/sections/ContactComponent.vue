@@ -27,7 +27,7 @@
           </div>
           <div class="d-flex flex-column justify-content-center mx-4 mt-4">
             <div class="d-flex flex-column m-4">
-              <a href="/bunarya_2026.pdf" download="Bun_Arya_Resume.pdf" class="download btn btn-light btn-outline-dark">
+              <a href="/bunarya_2026_site.pdf" download="Bun_Arya_Resume.pdf" class="download btn btn-light btn-outline-dark">
                 Download CV </a>
             </div>
             <p class="text-center"></p>

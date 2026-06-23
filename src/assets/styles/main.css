@@ -6,13 +6,14 @@
     --headline-font: "Inder", sans-serif;
     --light: #ffffff;
     --dark: #160647;
+    --btn-dark: #003c44;
     /*bootstrap default dark color */
     --bs-btn-bg: #212529;
     --bs-primary: #0048b1;
     --bs-warning-rgb: 255, 148, 0;
     --bs-primary-rgb: 0, 72, 177;
     --icon-width: 25px;
-    --gradient-aurora: linear-gradient(90deg, #a855f7, #06b6d4 50%, #3b82f6);
+    --gradient-aurora: linear-gradient(120deg, #0093AF 20%, #00FA9A 60%, #0257b2);
     /* IE and edge */
     -ms-overflow-style: none;
     /* firefox */
@@ -34,7 +35,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: var(--dark);
 }
-section#home, section#contact {
+
+section#contact {
     /* position: relative; */
     /* min-height: 100vh; */
     /* giving nice seperation gap */
@@ -57,6 +59,13 @@ a {
     text-decoration: none;
 }
 
+.header {
+    position: sticky;
+    top: 50px;
+    z-index: 10;
+    align-self: flex-start;
+}
+
 /* START Nav section and sidenav section */
 nav {
     position: fixed;
@@ -66,16 +75,29 @@ nav {
     display: flex;
     align-items: center;
     z-index: 1000;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+.nav-element a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* scrolled state */
+nav.scrolled {
+    background-color: rgba((--background-color), 0.4);
     backdrop-filter: blur(6px);
 }
 
-nav a.active {
-    /* color: red; */
+nav.scrolled .nav-element a {
+    color: var(--dark);
+}
+
+.nav-element a.active {
     border-bottom: 3px solid;
-    /* Thickness of the border */
     border-image-source: var(--gradient-aurora);
     border-image-slice: 1;
-    /* This ensures the gradient fills the border */
 }
 
 /* END button style */
@@ -98,7 +120,7 @@ nav a.active {
 }
 
 .btn-dark {
-    background-color: var(--dark);
+    background-color: var(--btn-dark);
 
     &:hover {
         background-color: var(--bs-btn-bg);
@@ -126,22 +148,47 @@ nav a.active {
 }
 
 
-.img-frame {
-    width: auto;
-    height: 25rem;
-}
 
-.img-frame img {
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    /* Move image 20% from the left and 30% from the top */
-    object-position: 80% 50%;
+
+    background: url("@/assets/img/IMG4278.png");
+    background-size: 80%;
+    background-position: 150% 53%;
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(to right,
+            #FCFDFC 20%,
+            rgba(252, 253, 252, 0.95) 35%,
+            rgba(252, 253, 252, 0.7) 45%,
+            rgba(252, 253, 252, 0.2) 60%,
+            rgba(252, 253, 252, 0) 100%);
+
+
+    backdrop-filter: blur(5px);
+
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+    /* Keeps text on top of the image */
 }
 
 .pfp-container {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin: 0 50px;
     flex-shrink: 0;
     /* Prevent shrinking size */
@@ -236,7 +283,7 @@ nav a.active {
 
 .content-block .content.active {
     background:
-        linear-gradient(#fafaff 0 0) padding-box,
+        linear-gradient(#f9fffa 0 0) padding-box,
         /*this is your grey background*/
         var(--gradient-aurora) border-box;
     border: 2px solid transparent;
@@ -274,9 +321,11 @@ nav a.active {
     display: flex;
     flex-direction: column;
 }
-.arrow-icon{
+
+.arrow-icon {
     transform: rotate(150deg);
 }
+
 .divider {
     height: 5px;
     width: auto;
@@ -284,96 +333,4 @@ nav a.active {
 
 .bg-gradient-aurora {
     background-image: var(--gradient-aurora);
-}
-
-@media (max-width: 768px) {
-    section#home {
-        position: relative;
-        /* min-height: auto; */
-        /* top: 3.5rem; */
-        padding: 70px 0;
-    }
-
-    section#contact {
-        top: 6rem;
-    }
-
-    .title-lg {
-        margin: 0 3rem;
-        letter-spacing: 12px;
-        font-size: 42px;
-        line-height: 42px;
-    }
-
-    .title-md {
-        letter-spacing: 5px;
-        font-size: 2.5rem;
-        line-height: 5rem;
-        margin: 0;
-    }
-
-    .pfp-container {
-        width: 150px;
-        height: 150px;
-        margin: 0 30px;
-        flex-shrink: 0;
-        /* Prevent shrinking size */
-        overflow: hidden;
-    }
-
-    .content-block {
-        width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .content-block {
-        padding: 10px 10px 10px 22px;
-        position: relative;
-        background: inherit;
-        /* width: 50%; */
-    }
-
-    .content-block::after {
-        content: '';
-        position: absolute;
-        top: calc(50% - 5px);
-        background: #ffffff;
-        z-index: 1;
-    }
-
-
-    .content-block::before {
-        content: '';
-        position: absolute;
-        width: 25px;
-        height: 2px;
-        top: calc(50% + 2px);
-        background: var(--dark);
-        z-index: 1;
-        left: -3px;
-    }
-
-    .content-block .icon {
-        visibility: hidden;
-        /* left: 25px; */
-    }
-
-    .content-block .content {
-        border: 2px solid var(--dark);
-        position: relative;
-        padding: 25px 25px 25px 25px;
-        border-radius: 50px;
-    }
-
-    .content-block .content h2 {
-        margin: 0;
-        font-size: 17px;
-        font-weight: normal;
-        color: var(--dark);
-    }
-
-    .arrow-icon {
-        transform: rotate(270deg);
-    }
 }
