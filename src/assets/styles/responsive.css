@@ -5,9 +5,8 @@
 
     .header {
         position: static;
-        top: 50px;
-        z-index: 10;
-        align-self: flex-start;
+        justify-content: center;
+        /* align-self:center; */
     }
 
     .title-lg {
@@ -27,10 +26,34 @@
     .pfp-container {
         width: 150px;
         height: 150px;
-        margin: 0 30px;
+        margin: 0;
         flex-shrink: 0;
         /* Prevent shrinking size */
         overflow: hidden;
+    }
+
+    .avatar-wrapper {
+        position: relative;
+        width: auto;
+        height: auto;
+        /* margin: 1.5rem;
+        /* move spacing here, away from pfp-container */
+    }
+
+    .avatar-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .avatar-frame {
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        width: 230px;
+        height: 230px;
+        pointer-events: none;
     }
 
     .content-block {
@@ -102,30 +125,16 @@
         width: 100%;
         height: 100%;
         /* match parent height, not just viewport */
-        background: url("@/assets/img/IMG4278.png");
-        background-size: 120%;
-        background-position: 40% -9rem;
-        background-attachment: scroll;
-        /* ✅ remove fixed on mobile */
+        background-size: 100dvh;
+        /* background-size: cover; */
+        /* background-position: center center; */
+        background-position: 60% 3rem;
         background-repeat: no-repeat;
     }
 
     .home::after {
-        content: "";
-        position: absolute;
-        top: 2px;
-        right: -2px;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom,
-                rgba(252, 253, 252, 0) 40%,
-                /* start fade earlier */
-                rgba(252, 253, 252, 0.6) 60%,
-                rgba(252, 253, 252, 0.95) 75%,
-                rgba(252, 253, 252, 1) 85%,
-                /* fully opaque before 100% */
-                #FCFDFC 100%);
-        backdrop-filter: none;
+        background: linear-gradient(to top,
+                rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.8) 35%, rgba(255, 255, 255, 0) 45%);
     }
 
     .content-overlay {
@@ -146,30 +155,14 @@
     }
 
     .home::before {
-        content: "";
-        position: absolute;
-        top: -2px;
-        right: -2px;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
         background-size: cover;
-        background-position: center;
+        background-position: center center;
         /* background-position: center bottom; */
-        /* background-attachment: fixed; */
         background-repeat: no-repeat;
     }
 
     .home::after {
-        background: linear-gradient(to bottom,
-                rgba(252, 253, 252, 0) 40%,
-                /* start fade earlier */
-                rgba(252, 253, 252, 0.6) 60%,
-                rgba(252, 253, 252, 0.95) 75%,
-                rgba(252, 253, 252, 1) 85%,
-                /* fully opaque before 100% */
-                #FCFDFC 100%);
-        backdrop-filter: none !important;
+        background: linear-gradient(to top,
+                rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0) 40%);
     }
-
 }

@@ -1,7 +1,7 @@
 <template>
     <section id="experiences">
         <main :id="id" class="container">
-            <div class="exp-row d-flex flex-xl-row flex-column my-4">
+            <div class="exp-row d-flex flex-xl-row flex-column my-4 ms-3 me-1">
                 <HeaderComponent id="exp-header" label="Experiences" />
                 <div class="exp-timeline timeline">
                     <div class="content-block" v-for="(exp, i) in experiences" :key="i">
@@ -17,7 +17,7 @@
                                 <span class="fw-bold badge border border-dark text-dark rounded-pill">
                                     <i class='bx bxs-map pe-1' style="font-size: 10px;"></i>{{ exp.location }}
                                 </span>
-                                <span class="badge rounded-pill" :class="exp.type.style">{{ exp.type.name }}</span>
+                                <span class="badge rounded-pill uppercase" :class="exp.type.style">{{ exp.type.name }}</span>
                             </p>
                             <div class=" d-flex flex-wrap uppercase my-4">
                                 <h2 class="fw-bold me-2">{{ exp.title }},</h2>
@@ -29,12 +29,12 @@
                             <ul v-for="(des, k) in exp.description" :key="k" class="gap-0">
                                 <li>{{ des.name }}</li>
                             </ul>
-                            <!-- <div class="card-footer-socials w-100  border-top">
-                                <div class="d-flex gap-2 pt-3"></div>
-                                 <span v-for="(stack, j) in exp.tech" :key="j" class="badge border rounded-pill"
+                            <div class="card-footer-socials w-100  border-top">
+                                <div class="d-flex pt-3"></div>
+                                 <span v-for="(stack, j) in exp.tech" :key="j" class="m-1 badge border rounded-pill"
                                     :class="stack.style">{{
                                         stack.name }}</span>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,10 @@ defineProps({
 });
 const experiences = [
     {
-        date: "Aug, 2024 - Dec, 2025",
+        date: "Aug 2024 - Dec 2025",
         location: 'Phnom Penh, Cambodia',
         type: { name: 'Freelance', style: 'text-bg-warning' },
-        title: 'Frontend web developer',
+        title: 'Freelance Frontend web developer',
         org: { name: 'FinTech Center', link: 'https://fintech.fsa.gov.kh/?lang=en' },
         tech: [
             { name: 'NuxtJs', style: 'border-success text-success ' },
@@ -66,14 +66,14 @@ const experiences = [
             { name: 'Axios', style: 'border-dark ' },
         ],
         description: [
-            { name: 'Study M&E System business flow' },
-            { name: 'Implement graph in dashboard for M&E System' },
-            { name: 'Design and implement authentication' },
-            { name: 'Design, develop and maintain User Management features' },
+            { name: 'Analyzed M&E System and business needs.' },
+            { name: 'Implemented visual data graph for dashboard.' },
+            { name: 'Designed and implemented authentication.' },
+            { name: 'Designed, developed and maintained User Management features.' },
         ]
     },
     {
-        date: 'Aug/2023 - Sept/2024',
+        date: 'Aug 2023 - Sept 2024',
         location: 'Phnom Penh, Cambodia',
         type: { name: 'Full-time', style: 'text-bg-success' },
         title: 'WEB DEVELOPER',
@@ -86,16 +86,17 @@ const experiences = [
             { name: 'Firebase', style: 'border-dark' },
         ],
         description: [
-            { name: 'Design UI/UX and develop frontend web applications' },
-            { name: 'Built features real-time notifications for order management' },
-            { name: 'Collaborate and assisting mobile and backend tasks' },
+            { name: 'Designed UI/UX and developed frontend web applications.' },
+            { name: 'Built real-time notifications for order management features.' },
+            { name: 'Collaborated and assisted mobile development using flutter.' },
+            { name: 'Assisted backend tasks when needed.' },
         ]
     },
     {
-        date: 'Feb/2023 - Oct/2023',
+        date: 'Feb 2023 - Oct 2023',
         location: 'Phnom Penh, Cambodia',
         type: { name: 'Internship', style: 'text-bg-info' },
-        title: 'ODOO DEVELOPMENT',
+        title: 'ODOO DEVELOPer Intern',
         org: { name: 'RMA CAMBODIA PLC.', link: 'https://rmagroup.com/' },
         tech: [
             { name: 'Odoo', style: 'border-primary text-primary ' },
@@ -104,16 +105,16 @@ const experiences = [
             { name: 'PostgreSQL', style: 'border-info text-info ' },
         ],
         description: [
-            { name: 'Developed and customized Odoo HR modules' },
-            { name: 'Extended existing features using Python and XML' },
+            { name: 'Developed and customized Odoo HR modules.' },
+            { name: 'Extended existing features using Python and XML.' },
             { name: 'Assisted in implementing HR workflows' },
         ]
     },
     {
-        date: 'Jun, 2022 - Oct, 2022',
+        date: 'Jun 2022 - Oct 2022',
         location: 'Phnom Penh, Cambodia',
         type: { name: 'Internship', style: 'text-bg-info' },
-        title: 'WEB DEVELOPER',
+        title: 'WEB DEVELOPER intern',
         org: { name: 'Khmer Foundation Appraisal Co, LTD', link: 'https://kfa.com.kh/' },
         tech: [
             { name: 'Laravel', style: 'border-danger text-danger ' },
@@ -122,9 +123,10 @@ const experiences = [
             { name: 'Google Map API', style: 'border-success text-success ' },
         ],
         description: [
-            { name: 'Developed and maintained a CRM system' },
-            { name: 'Built and integrated RESTful APIs to support mobile application' },
-            { name: 'Integrated Google Maps API to enable property search and listings for property management' },
+            { name: 'Designed UI/UX for CRM System using Figma.' },
+            { name: 'Developed and maintained a CRM system using VueJs.' },
+            { name: 'Built and integrated RESTful APIs to support mobile application using LaravelV.' },
+            { name: 'Integrated Google Maps API to enable property search and listings for property management.' },
         ]
     },
 ];
