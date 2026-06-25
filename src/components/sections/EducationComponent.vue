@@ -1,7 +1,7 @@
 <template>
     <section id="education">
         <main :id="id" class="container">
-            <div class="animate-row d-flex flex-xl-row flex-column my-4">
+            <div class="animate-row d-flex flex-xl-row flex-column m-3">
                 <HeaderComponent id="education-header" label="Education" />
                 <div class="education-timeline timeline">
                     <div class="content-block">

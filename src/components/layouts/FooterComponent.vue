@@ -4,7 +4,7 @@
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-between">
                 <!-- Copyright -->
                 <div class="d-flex align-items-center">
-                    <i><i class='bx bx-copyright'></i>2026 Arya Bun. All Rights Reserved</i>
+                    <i>Designed & built by Arya Bun <i class='bx bx-copyright'></i> 2026</i>
                 </div>
                 <!-- GitHub -->
                 <div class="d-flex my-2">

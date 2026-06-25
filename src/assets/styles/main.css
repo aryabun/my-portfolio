@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inder&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Outfit:wght@100..900&display=swap');
 :root {
     --background-color: #FCFDFC;
-    --primary-font: "Mulish", sans-serif;
+    --primary-font: "Outfit", sans-serif;
     --headline-font: "Inder", sans-serif;
     --light: #ffffff;
     --dark: #160647;
     --btn-dark: #003c44;
     /*bootstrap default dark color */
-    --bs-btn-bg: #212529;
+    --bs-btn-bg: #000102;
     --bs-primary: #0048b1;
     --bs-warning-rgb: 255, 148, 0;
     --bs-primary-rgb: 0, 72, 177;
@@ -31,14 +30,14 @@ body {
 
 #app {
     font-family: var(--primary-font);
+    font-weight: 200;
+    letter-spacing: .04em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: var(--dark);
 }
 
 section#contact {
-    /* position: relative; */
-    /* min-height: 100vh; */
     /* giving nice seperation gap */
     padding: 70px 0;
 }
@@ -57,7 +56,10 @@ a {
     color: var(--dark);
     font-weight: bold;
 }
-
+.btn-link{
+    text-decoration: none;
+    color: var(--dark);
+}
 .header {
     position: sticky;
     top: 50px;
@@ -178,11 +180,25 @@ nav a.active {
     z-index: 2;
     /* Keeps text on top of the image */
 }
+.avatar-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 1.5rem; /* move spacing here, away from pfp-container */
+}
 
+.avatar-frame {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  /* z-index: 0; */
+}
 .pfp-container {
     width: 200px;
     height: 200px;
-    margin: 0 50px;
     flex-shrink: 0;
     /* Prevent shrinking size */
     overflow: hidden;
