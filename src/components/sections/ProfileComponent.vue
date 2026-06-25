@@ -7,7 +7,7 @@
                     <div class="d-flex flex-column my-4">
                         <div class="d-flex flex-sm-column mx-auto">
                             <div class="d-flex flex-sm-row pfp-container my-2">
-                                <img src="@/assets/img/IMG2797.png" alt="profile_pic">
+                                <img src="@/assets/img/IMG4449.png" alt="profile_pic">
                             </div>
                         </div>
                         <div class="mx-2 p-4">

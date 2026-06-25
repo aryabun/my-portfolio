@@ -57,12 +57,12 @@ onMounted(() => {
             }
         });
         // Add this
-        ScrollTrigger.create({
-            start: "700px top",
-            end: 99999,
-            onEnter: () => document.querySelector(".nav").classList.add("scrolled"),
-            onLeaveBack: () => document.querySelector(".nav").classList.remove("scrolled"),
-        });
+        // ScrollTrigger.create({
+        //     start: "700px top",
+        //     end: 99999,
+        //     onEnter: () => document.querySelector(".nav").classList.add("scrolled"),
+        //     onLeaveBack: () => document.querySelector(".nav").classList.remove("scrolled"),
+        // });
         let links = gsap.utils.toArray("nav a");
 
         links.forEach((a) => {
