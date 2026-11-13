@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-row header w-100">
+    <div class="d-flex flex-row w-100 header justify-content-center align-items-center" style="padding: 16px 0;">
         <h1 class="element title-md"><span>
                 {{ props.label }}
             </span></h1>

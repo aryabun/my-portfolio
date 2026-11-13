@@ -15,7 +15,8 @@
           <!-- Your specific content goes here -->
           <div class="d-flex flex-lg-row flex-column flex-lg-fill align-items-lg-end align-items-center">
             <div class="d-flex flex-column justify-content-end">
-              <h1 class="title-lg m-0">Let's talk
+              <h1 class="m-0" style="font-size: 64px;">
+                Let's talk
               </h1>
             </div>
             <div class="d-flex flex-column justify-content-end">

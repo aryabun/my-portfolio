@@ -7,13 +7,11 @@
                         <img src="@/assets/img/A-drawn.png" class="logo" alt="logo">
                     </div>
                     <div
-                        class="nav-element  d-none d-lg-flex d-flex flex-row align-items-center w-100 gap-4 justify-content-md-end">
-                        <div><a href="#home">Home</a></div>
-                        <div><a href="#profile">Profile</a></div>
-                        <div><a href="#education">Education</a></div>
-                        <div><a href="#experiences">Experiences</a></div>
-                        <div><a href="#skill">Skills</a></div>
-                        <div><a href="#contact">Contact</a></div>
+                        class="d-none flex-shrink-0 d-lg-flex d-flex flex-row align-items-center w-100 gap-5 justify-content-md-end">
+                        <h5><a href="#home">Home</a></h5>
+                        <h5><a href="#about-me">About me</a></h5>
+                        <h5><a href="#skill">My work</a></h5>
+                        <h5><a href="#contact">Contact</a></h5>
                     </div>
                     <div class="plus-element d-flex flex-row d-lg-none justify-content-center align-items-center ">
                         <i class='bx bx-plus' style="font-size: 40px;"></i>
@@ -97,7 +95,7 @@ onUnmounted(() => {
 </script>
 <style lang="css" scoped>
 .logo {
-    height: 4rem;
+    height: 3.5rem;
     margin: 10px 0;
 }
 </style>

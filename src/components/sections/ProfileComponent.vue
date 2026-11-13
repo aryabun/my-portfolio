@@ -1,9 +1,9 @@
 <template>
-    <section id="profile">
+    <section id="about-me">
         <main :id="id" class="container">
-            <div class="animate-row d-flex flex-xl-row flex-column my-4">
+            <div class="animate-row d-flex flex-column my-4">
                 <HeaderComponent id="profile-header" label="Profile" />
-                <div class="glass-card pfp-card mx-3">
+                <div class="pfp-card mx-3">
                     <div class="d-flex flex-column">
                         <div class="mx-auto avatar-wrapper">
                             <!-- Profile photo, clipped to circle -->
@@ -15,46 +15,39 @@
                         </div>
 
                     </div>
-                    <div class="d-flex flex-column flex-lg-row gap-2 mx-auto align-items-center text-muted">
+                    <div class="d-flex flex-column gap-2 mx-auto align-items-center">
                         <div class="d-flex flex-wrap align-items-center gap-2">
-                            <i class='bx bxs-map'></i><i><span>Phnom Penh, Cambodia</span></i>
+                            <i class='bx bx-map'></i><span>Phnom Penh, Cambodia</span>
                         </div>
-                        <div class="d-flex flex-row gap-2">
-                            |
+                        <div class="d-flex flex-row gap-3">
                             <a class="p-0 btn btn-link d-flex align-items-center" href="https://github.com/aryabun"
                                 target="_blank">
-                                <i class='bx bxl-github' style="font-size: 25px;"></i>
-                            </a> |
+                                <i class='bx bxl-github' style="font-size: 30px;"></i>
+                            </a>
                             <a class="p-0 btn btn-link d-flex align-items-center"
                                 href="https://www.linkedin.com/in/arya-bun-9464a31a4/" target="_blank">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png"
-                                    alt="" style="width: 25px;">
-                            </a>|
+                                    alt="" style="width: 30px;">
+                            </a>
                             <a class="p-0 btn btn-link d-flex align-items-center"
                                 href="https://www.instagram.com/apsararya_/" target="_blank">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt=""
-                                    style="width: 25px;">
+                                    style="width: 30px;">
                             </a>
                         </div>
                     </div>
                     <div class="d-flex flex-column mx-2 p-4 ">
                         <div class="d-flex flex-column mb-4 text-center">
-                            <p class="my-2">I am a <span class="fw-bold">web developer</span> with a Bachelor's
-                                degree from
-                                <a href="https://itc.edu.kh/" target="_blank">Institute of Technology of Cambodia <i
-                                        class='bx bx-link'></i></a>.
-                                I have a solid background in <span class="fw-bold">frontend development using
-                                    VueJs/NuxtJs</span>.
-                                Additionally, my previous experience in a startup environment allowed me to expand
-                                my skills into
-                                <span class="fw-bold">backend development with Laravel (PHP)</span> and
-                                <span class="fw-bold">assisting with mobile development team using Flutter.</span>
+                            <p class="my-2">I am a frontend developer, graduated from Institute of Technology of
+                                Cambodia . I have a solid background in frontend development using VueJs/NuxtJs.
                             </p>
-                            <p class="my-2">This cross-platform experience allows me to collaborate effectively. I'm
-                                currently
-                                searching new
-                                challenges and
-                                opportunities to enhance my skills.</p>
+                            <p class="my-2">
+                                Additionally, my previous experience in a startup environment allowed me to expand my
+                                skills into backend development with Laravel (PHP) and assisting with mobile development
+                                team using Flutter.
+                            </p>
+                            <p class="my-2">This cross-platform experience allows me to collaborate effectively. I'm currently searching new challenges and opportunities to enhance my skills.
+                            </p>
                         </div>
                         <div class="d-flex flex-column align-items-center justify-content-center m-2">
                             <span class="fw-bold uppercase d-flex flex-row align-items-center">
@@ -76,19 +69,16 @@
                                 <span class="me-2" style="font-size: 25px;"><i class='bx bx-palette'></i></span>
                                 Hobbies :</span>
                             <span class="fw-bold d-flex flex-wrap align-items-center">
-                                <div class="m-2 badge border border-success text-success rounded-pill">Read</div>
-                                <div class="m-2 badge border border-success text-success rounded-pill">Movie</div>
-                                <div class="m-2 badge border border-success text-success rounded-pill">Fitness(gym,
-                                    running)</div>
-                                <div class="m-2 badge border border-success text-success rounded-pill">Music</div>
-                                <div class="m-2 badge border border-success text-success rounded-pill">Travel</div>
+                                <div class="m-2 badge border border-secondary text-dark rounded-pill">Read</div>
+                                <div class="m-2 badge border border-secondary text-dark rounded-pill">Movie</div>
+                                <div class="m-2 badge border border-secondary text-dark rounded-pill">Fitness</div>
+                                <div class="m-2 badge border border-secondary text-dark rounded-pill">Music</div>
+                                <div class="m-2 badge border border-secondary text-dark rounded-pill">Travel</div>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="mb-4">
-            </div> -->
         </main>
     </section>
 </template>

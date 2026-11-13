@@ -1,47 +1,28 @@
 <template>
     <section id="education">
         <main :id="id" class="container">
-            <div class="animate-row d-flex flex-xl-row flex-column m-3">
+            <div class="animate-row d-flex flex-column m-3">
                 <HeaderComponent id="education-header" label="Education" />
-                <div class="education-timeline timeline">
-                    <div class="content-block">
-                        <i class='icon bx bxs-graduation'></i>
-                        <div class="content">
-                            <div class="date"></div>
+                <div class="d-flex flex-column gap-4 education-timeline py-5">
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <h4><a href="https://itc.edu.kh/" target="_blank">Institute of Technology of
+                                    Cambodia <i class='bx bx-link'></i></a></h4>
                             <p>
-                                <span class="mb-1 me-3 badge border border-danger text-danger rounded-pill">
-                                    <i class='pe-1 bx bxs-circle' style="color: red; font-size: 10px;"></i>
-                                    <i class=" fw-bold">2009-2013</i></span>
-                                <span class="fw-bold badge border border-dark text-dark rounded-pill">
-                                    <i class='bx bxs-map pe-1' style="font-size: 10px;"></i>Phnom Penh, Cambodia
-                                </span>
-                            </p>
-                            <h2 class="my-4"><a href="https://itc.edu.kh/" target="_blank">Institute of Technology of
-                                    Cambodia <i class='bx bx-link'></i></a></h2>
-                            <i>
                                 Bachelor of Science in Computer Science
-                            </i>
+                            </p>
                         </div>
+                        <h4>2018-2023</h4>
                     </div>
-                    <div class="content-block">
-                        <i class='icon bx bxs-graduation'></i>
-                        <div class="content">
-                            <div>
-                                <span class="mb-1 me-3 badge border border-danger text-danger rounded-pill">
-                                    <i class='pe-1 bx bxs-circle' style="color: red; font-size: 10px;"></i>
-                                    <i class=" fw-bold">2012-2018</i>
-                                </span>
-                                <span class="fw-bold badge border border-dark text-dark rounded-pill">
-                                    <i class='bx bxs-map pe-1' style="font-size: 10px;"></i>Phnom Penh, Cambodia
-                                </span>
-                            </div>
-                            <h2 class="my-4">Santhormuk Highschool</h2>
-                            <i>
+                    <div class="d-flex flex-row justify-content-between align-items-center">
+                        <div class="d-flex flex-column">
+                            <h4>Santhormuk Highschool</h4>
+                            <p>
                                 Highschool graduate
-                            </i>
+                            </p>
                         </div>
+                        <h4>2012-2018</h4>
                     </div>
-
                 </div>
             </div>
         </main>
@@ -65,9 +46,8 @@ onMounted(() => {
         gsap.timeline({
             scrollTrigger: {
                 trigger: '#education-header',
-                start: "top 80%",
+                start: "top 80%",       // Starts when the row is 80% down the screen
                 toggleActions: 'play none none none',
-                once: true
             }
         })
             .from('#education-header', {
@@ -82,19 +62,7 @@ onMounted(() => {
                 x: 20,
                 ease: "power3.out"
             }, "+=0.1");
-        const blocks = document.querySelectorAll('.content');
-        blocks.forEach((block) => {
-            ScrollTrigger.create({
-                trigger: block,
-                start: "top 50%",      // Highlight starts when block reaches 60% of viewport
-                end: "bottom 50%",    // Highlight ends when block leaves 40% of viewport
-                onEnter: () => block.classList.add("active"),
-                onLeave: () => block.classList.remove("active"),
-                onEnterBack: () => block.classList.add("active"),
-                onLeaveBack: () => block.classList.remove("active"),
-                // markers: true,     // Uncomment this to see the focus zone
-            });
-        });
+       
     });
 });
 onUnmounted(() => {
